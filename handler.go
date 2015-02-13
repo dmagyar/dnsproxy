@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 	"net"
-	"dns"
+	"github.com/miekg/dns"
 	"strings"
 )
 

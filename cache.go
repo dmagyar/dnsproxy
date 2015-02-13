@@ -4,7 +4,7 @@ import (
 	"crypto/md5"
 	"encoding/json"
 	"fmt"
-	"dns"
+	"github.com/miekg/dns"
 	"sync"
 	"time"
 )

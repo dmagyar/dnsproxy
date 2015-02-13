@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"dns"
+	"github.com/miekg/dns"
 	"strings"
 	"time"
 )
