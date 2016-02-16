@@ -27,7 +27,7 @@ func NewHosts(hs HostsSettings) Hosts {
 func (h *Hosts) Get(domain string, family int) (ip net.IP, ok bool) {
 	var sip string
 
-	if sip, ok = h.FileHosts[domain]; !ok {
+	if sip, ok = h.FileHosts[strings.ToLower(domain)]; !ok {
 			return nil, false
 	}
 
@@ -67,7 +67,7 @@ func (f *FileHosts) GetAll() map[string]string {
 	for scanner.Scan() {
 
 		line := scanner.Text()
-		line = strings.TrimSpace(line)
+		line = strings.TrimSpace(strings.ToLower(line))
 
 		if strings.HasPrefix(line, "#") || line == "" {
 			continue
